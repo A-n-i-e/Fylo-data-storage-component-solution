@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--very-dark-blue);
+    font-size: 14px;
+    overflow: hidden;
+}
+main{
+    background: url("images/bg-desktop.png") no-repeat;
+    background-position: bottom right;
+    background-size: 100vw 50vh;
+    height: 100vh;
+    
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1rem;
+
+}
+.left{
+    background-color: var(--dark-blue);
+    text-align: left;
+    padding: 2rem;
+    min-width: 150px;
+    border-radius: 5px;
+    border-top-right-radius: 5rem ;
+
+    
+}
+.logo img{
+    max-width: 100px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.btn img{
+    background-color: var(--very-dark-blue);
+    padding: .4rem;
+    max-height: 15px;
+    border-radius: 5px;
+    max-width: 20px;
+    width: 100%;
+    animation: ease-in .5s;
+}
+
+.btn img:hover{
+    transform: scale(130%);
+}
+.right{
+    min-width: 400px;
+}
+.stuff{
+    margin-top: 6%;
+}
+.right .comment{
+    background-color: white;
+    max-width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 75%;
+    top:-10%;
+    border-radius: 5px;
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--grayish-blue);
+    font-weight: 400;
+    font-size: .7rem;
+    text-transform: uppercase;
+
+}
+.right .comment span{
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+.right .comment::after{
+    content: '';
+    position: absolute;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+    top: 90%;
+    right: 0;
+}
+.box{
+    border-radius: 5px;
+    background-color: var(--dark-blue);
+    padding: 2rem;
+}
+.box p{
+    color: var(--grayish-blue);
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.box p span{
+    color: var(--pale-blue);
+    font-weight: 600;
+}
+.box input{
+    width: 100%;
+    outline: none;
+    background-color:var(--very-dark-blue);
+}
+.range{
+    display: flex;
+    justify-content: space-between;
+    color: var(--pale-blue);
+    font-weight: 600;
+    font-size: 12px;
+}
+.slider{
+    width: 100%;
+    border-radius: 15px;
+    height: 10px;
+    margin-bottom: .5rem;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    
+}
+.volume{
+    display:block;
+    width: 80%;
+    height: 9px;
+    border-radius: 15px 0 0 15px;
+    margin-left: .1rem;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%) );
+}
+.circle{
+    display: block;
+    width:9px;
+    height:9px;
+    border-radius: 50%;
+    margin-left: -5px;
+    background-color: white;
+}
+@media (max-width:630px) {
+    main{
+        background: url("images/bg-mobile.png") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        min-width: 250px;
+        max-width: 350px;
+
+    }
+    .right .comment{
+        position: absolute;
+        left: 35%;
+        top: 90%;  
+    }
+    .right .comment::after{
+        border-top: 0px solid white;
+        border-left: 0px solid transparent;
+    }
+    .stuff{
+        width: 100%;
+        max-width: 350px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+}
